@@ -1,0 +1,22 @@
+{
+  "name": "@nti-info-display/server",
+  "version": "1.0.50",
+  "scripts": {
+    "tw": "bunx tailwindcss -i ./src/styles.css -o ./tailwind-gen/styles.css",
+    "dev:srv": "bun run --watch src/index.ts",
+    "dev:tw": "bunx tailwindcss -i ./src/styles.css -o ./public/tw-styles.css --watch",
+    "dev": "concurrently \"bun run dev:srv\" \"bun run dev:tw\""
+  },
+  "dependencies": {
+    "@bogeychan/elysia-logger": "^0.0.7",
+    "@elysiajs/html": "^0.6.5",
+    "@elysiajs/static": "^0.6.0",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "concurrently": "^8.2.1",
+    "tailwindcss": "^3.3.3"
+  },
+  "module": "src/index.js"
+}
